@@ -38,6 +38,6 @@ app.use((error, _request, response, _next) => {
 const databaseConnected = await connectDatabase();
 if (databaseConnected) await seedInitialTickets();
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`Veridian IT agent server listening on port ${port}.`);
 });
